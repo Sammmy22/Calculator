@@ -2,19 +2,14 @@ function calculate(num1, num2, op) {
   switch (op) {
     case "+":
       return parseFloat(num1) + parseFloat(num2);
-      break;
     case "-":
       return parseFloat(num1) - parseFloat(num2);
-      break;
     case "*":
       return parseFloat(num1) * parseFloat(num2);
-      break;
     case "/":
       return parseFloat(num1) / parseFloat(num2);
-      break;
     case "%":
       return parseFloat(num1) % parseFloat(num2);
-      break;
   }
 }
 
