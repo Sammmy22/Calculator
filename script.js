@@ -12,6 +12,9 @@ function calculate(num1, num2, op) {
     case "/":
       return parseFloat(num1) / parseFloat(num2);
       break;
+    case "%":
+      return parseFloat(num1) % parseFloat(num2);
+      break;
   }
 }
 
