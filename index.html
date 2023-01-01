@@ -10,29 +10,31 @@
   <body>
     <h1>Calculator</h1>
     <div class="calc">
-      <div class="operation">1</div>
-      <div class="result">2</div>
+      <div class="operation">
+        <span id="prev"></span><span id="sign">op</span>
+      </div>
+      <div class="result"></div>
       <div class="buttons">
         <button class="brdr" id="clear">C</button>
-        <button class="brdr">%</button>
-        <button class="brdr">⌫</button>
-        <button class="brdr">/</button>
+        <button class="brdr" id="back">⌫</button>
+        <button class="brdr ops">%</button>
+        <button class="brdr ops">/</button>
         <button class="nmbr">7</button>
         <button class="nmbr">8</button>
         <button class="nmbr">9</button>
-        <button class="brdr">*</button>
+        <button class="brdr ops">*</button>
         <button class="nmbr">4</button>
         <button class="nmbr">5</button>
         <button class="nmbr">6</button>
-        <button class="brdr">-</button>
+        <button class="brdr ops">-</button>
         <button class="nmbr">1</button>
         <button class="nmbr">2</button>
         <button class="nmbr">3</button>
-        <button class="brdr">+</button>
+        <button class="brdr ops">+</button>
         <button class="nmbr">00</button>
         <button class="nmbr">0</button>
         <button class="nmbr">.</button>
-        <button class="brdr">=</button>
+        <button class="brdr" id="eval">=</button>
       </div>
     </div>
     <script src="script.js"></script>

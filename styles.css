@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background-image: linear-gradient(rgb(225, 168, 47), white);
+  background-image: linear-gradient(rgb(225, 168, 47), rgb(0, 0, 0));
   text-align: center;
 }
 
@@ -12,11 +12,11 @@ html {
 .result {
   font-size: 28px;
   background-color: black;
-  color: aliceblue;
+  color: white;
   text-align: right;
-  width: 390px;
-  height: 60px;
-  padding-right: 10px;
+  width: 380px;
+  height: 40px;
+  padding: 10px;
 }
 
 .calc {
