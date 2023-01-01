@@ -1,4 +1,4 @@
-function Calculate(num1, num2, op) {
+function calculate(num1, num2, op) {
   switch (op) {
     case "+":
       return parseFloat(num1) + parseFloat(num2);
@@ -27,14 +27,11 @@ document.querySelector("#clear").addEventListener("click", function () {
 
 const num_btns = document.querySelectorAll(".nmbr");
 
-// console.log(num_btns);
-
 for (let i = 0; i < num_btns.length; i++) {
   num_btns[i].addEventListener("click", () => {
     let result = document.querySelector(".result");
-    // console.log(num_btns[i].innerHTML);
+
     result.innerHTML += num_btns[i].innerHTML;
-    // result.innerHTML = parse(num_btns[i].innerHTML);
   });
 }
 
@@ -45,8 +42,6 @@ backspace.addEventListener("click", () => {
 });
 
 const operators = document.querySelectorAll(".ops");
-
-console.log(operators);
 
 const sign = document.querySelector("#sign");
 const prev = document.querySelector("#prev");
@@ -60,7 +55,7 @@ for (let i = 0; i < operators.length; i++) {
 }
 
 document.querySelector("#eval").addEventListener("click", () => {
-  result.innerHTML = Calculate(
+  result.innerHTML = calculate(
     prev.innerHTML,
     result.innerHTML,
     sign.innerHTML
