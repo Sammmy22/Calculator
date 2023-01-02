@@ -18,10 +18,14 @@ let result = document.querySelector(".result");
 let operation = document.querySelector(".operation");
 
 document.querySelector("#clear").addEventListener("click", function () {
+  clear();
+});
+
+function clear() {
   result.innerHTML = "";
   sign.innerHTML = "";
   prev.innerHTML = "";
-});
+}
 
 const num_btns = document.querySelectorAll(".nmbr");
 
@@ -53,12 +57,24 @@ for (let i = 0; i < operators.length; i++) {
 }
 
 document.querySelector("#eval").addEventListener("click", () => {
-  result.innerHTML = calculate(
-    prev.innerHTML,
-    result.innerHTML,
-    sign.innerHTML
-  );
+  let n1 = prev.innerHTML;
+  let n2 = result.innerHTML;
+  let op = sign.innerHTML;
 
+  if (n1 == "" || n2 == "" || op == "") {
+    result.innerHTML = "Please enter proper values";
+    setTimeout(() => {
+      clear();
+    }, 1000);
+  } else {
+    result.innerHTML = calculate(n1, n2, op);
+  }
+
+  if (isNaN(result.innerHTML)) {
+    setTimeout(() => {
+      clear();
+    }, 1000);
+  }
   prev.innerHTML = "";
   sign.innerHTML = "";
 });
